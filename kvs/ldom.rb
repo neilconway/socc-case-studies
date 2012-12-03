@@ -37,8 +37,8 @@ class DomLattice < Bud::Lattice
   end
 
   private
-  def preserve_dominants(target, other, rv)
-    target.each_pair do |k1, val|
+  def preserve_dominants(source, other, rv)
+    source.each_pair do |k1, val|
       # A key/value pair is included in the result UNLESS there is another key
       # in the other input that dominates it. Note that there can be at most one
       # such dominating key in either of the inputs.
